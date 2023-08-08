@@ -3,6 +3,7 @@
     --accent-font-color: #E866ED;
     --main-font-color: #fff;
     --border-color: #fff;
+    --curved-border: 5px;
 }
 
 body {
@@ -32,10 +33,19 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .snippet h2 {
+    position: relative;
     font-size: 18px;
     background-color: var(--bgcolor);
     border: 1px solid var(--border-color);
-    border-radius: 5px;
+    border-radius: var(--curved-border);
     padding: 8px 14px;
     margin-top: -30px;
+}
+
+.snippet pre {
+    border-radius: var(--curved-border);
+    background-image: linear-gradient(
+        rgba(232, 102, 236, 0.3) 0%,
+        rgba(232, 102, 236, 0.6) 100%
+    );
 }
